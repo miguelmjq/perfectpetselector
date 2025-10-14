@@ -5,6 +5,8 @@ public class Selector{
       //scanner starts here
         int n=0;
         int b=0;
+        String vowel = "AEIOUaeiou";
+        String consonant = "BCDFGHIJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz";
         String pet= "";
         Scanner scan = new Scanner(System.in);
         //name
@@ -46,10 +48,57 @@ public class Selector{
           }
         }
         scan.close();
+
         //if statements start here
-        if (color =="blue"){
-          
+        if (color.equalsIgnoreCase("blue")){
+          if (season.equalsIgnoreCase("fall")){
+            pet = "alligator";
+          }
+          else if (season.equalsIgnoreCase("spring")){
+            pet = "ostrich";
+          }
+          else if (((consonant.indexOf((name.substring(0,1))))!=-1)&& ((season!="summer")&&(season!="fall"))){
+              if (pet.equalsIgnoreCase("ostrich")){
+                  pet = "ostrich";
+              }
+              else{
+                pet = "axolotl";
+              }
+          }
         }
+
+        if (color .equals("green")){
+          if (((consonant.indexOf((name.substring(0,1))))!=-1)&& season .equals("winter")){
+            pet ="giraffe";
+          }
+          else if (season !="fall"){
+            if (pet.equals("giraffe")){
+              pet = "giraffe";
+            }
+            else{
+              pet ="dog";
+            }
+          }
+        }
+
+        if (color .equals("red")){
+          if (((vowel.indexOf((name.substring(0,1))))!=-1)){
+            pet = "porcupine";
+          }
+          else{
+            pet = "panda";
+          }
+        }
+      
+        if ((season .equals("summer") )&&(pet!="dog"&&pet!="porcupine"&&pet!="panda")){
+          pet ="pony";
+        }
+        
+        if (pet.equals("")){
+          pet = "rock";
+        }
+        System.out.println("Your perfect pet is "+pet);
     }
+
 
 }
