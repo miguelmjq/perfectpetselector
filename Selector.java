@@ -2,14 +2,16 @@ import java.util.*;
 
 public class Selector{
     public static void main(String[] args) {
+      //scanner starts here
         int n=0;
+        int b=0;
+        String pet= "";
         Scanner scan = new Scanner(System.in);
-
-
+        //name
         System.out.println("Enter name: ");
         String name = scan.nextLine();
         System.out.println("Your name is: "+name);
-
+        //color
         System.out.println("Choose your favourite color from Red, Green, or Blue: ");
         String color = scan.nextLine();
         color = color.toLowerCase();
@@ -26,14 +28,10 @@ public class Selector{
             color = color.toLowerCase();
           }
         }
-
- 
-
-
+        //season
         System.out.println("Choose your favourite season from Spring, Summer, Fall, or Winter: ");
         String season = scan.nextLine();
         season = season.toLowerCase();
-        int b=0;
         while (b==0) {
             
           if (season.equalsIgnoreCase("spring")||season.equalsIgnoreCase("summer")||season.equalsIgnoreCase("fall")||season.equalsIgnoreCase("winter")){
@@ -48,6 +46,10 @@ public class Selector{
           }
         }
         scan.close();
+        //if statements start here
+        if (color =="blue"){
+          
+        }
     }
 
 }
