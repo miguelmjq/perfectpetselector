@@ -1,3 +1,7 @@
+// Miguel Mirabal Q
+// period 7
+// The program recieves a name, a color, and a season from the user and
+// outputs the perfect pet for them based on those inputs.
 import java.util.*;
 
 public class Selector{
@@ -6,7 +10,7 @@ public class Selector{
         int n=0;
         int b=0;
         String vowel = "AEIOUaeiou";
-        String consonant = "BCDFGHIJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz";
+        String consonant = "BCDFGHJKLMNPQRSTVWXYZbcdfghjklmnpqrstvwxyz";
         String pet= "";
         Scanner scan = new Scanner(System.in);
         //name
